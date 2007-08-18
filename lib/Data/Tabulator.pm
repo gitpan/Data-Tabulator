@@ -5,15 +5,15 @@ use strict;
 
 =head1 NAME
 
-Data::Tabulator - Create a table (two-dimensional array) from a list (one dimensional array)
+Data::Tabulator - Create a table (two-dimensional array) from a list (one-dimensional array)
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -57,14 +57,12 @@ __PACKAGE__->mk_accessors(qw/_data row_count column_count overlap column_offset 
 
 sub _rows {
     my $data = shift;
-    my $rows = shift;
-    return __PACKAGE__->new(data => $data, rows => $rows, @_)->rows;
+    return __PACKAGE__->new(data => $data, @_)->rows;
 }
 
 sub _columns {
     my $data = shift;
-    my $columns = shift;
-    return __PACKAGE__->new(data => $data, columns => $columns, @_)->columns;
+    return __PACKAGE__->new(data => $data, @_)->columns;
 }
 
 =over 4

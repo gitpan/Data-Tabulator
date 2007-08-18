@@ -1,3 +1,6 @@
+0.02 Friday August 17 19:03:19 PDT 2007:
+- Minor interface change to exported rows and columns functions
+
 0.01 Thursday August 09 13:27:24 PDT 2007:
 - Row major/column major selectable implementation
 
