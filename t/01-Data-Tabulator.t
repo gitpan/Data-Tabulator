@@ -51,3 +51,17 @@ is_deeply(rows([ 'a' .. 'z' ], rows => 3), Data::Tabulator->rows([ 'a' .. 'z' ],
 
 $table = Data::Tabulator->new([ 'a' .. 'z' ], columns => 4);
 is_deeply(columns([ 'a' .. 'z' ], columns => 4), $table->columns);
+
+$table = Data::Tabulator->new([ (1) x 4 ], columns => 3, padding => 2);
+is_deeply($table->rows, [ [ (1) x 3 ], [ 1, 2, 2 ] ]);
+
+my $geometry = $table->geometry;
+is($geometry->[0], 3);
+is($geometry->[1], 2);
+
+$geometry = [ $table->dimensions ];
+is($geometry->[0], 3);
+is($geometry->[1], 2);
+
+is_deeply($table->row(1), [ 1, 2, 2 ]);
+is_deeply($table->column(1), [ 1, 2 ]);

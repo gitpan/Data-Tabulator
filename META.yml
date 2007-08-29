@@ -1,6 +1,6 @@
 ---
 name: Data-Tabulator
-version: 0.02
+version: 0.03
 author:
   - 'Robert Krimen <rkrimen@cpan.org>'
 abstract: Create a table (two-dimensional array) from a list (one-dimensional array)
@@ -17,7 +17,7 @@ build_requires:
 provides:
   Data::Tabulator:
     file: lib/Data/Tabulator.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2806
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
